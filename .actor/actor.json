@@ -1,0 +1,25 @@
+{
+    "actorSpecification": 1,
+    "name": "pinterest-ultimate-scraper",
+    "title": "Pinterest Ultimate Scraper (Pins, Boards, HD Media, Outbound Links & Search)",
+    "description": "Comprehensive all-in-one Pinterest data extractor without login. Extracts Pins with original HD images & MP4 videos, Outbound store links for dropshipping & affiliate marketing, Save/repin counts, full Boards, Creator Profiles with monthly views, and Keyword Search.",
+    "version": "1.0.0",
+    "meta": {
+        "templateId": "js-crawlee-playwright"
+    },
+    "dockerfile": "./Dockerfile",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "output": "./output_schema.json",
+    "categories": [
+        "E-COMMERCE",
+        "MARKETING",
+        "SOCIAL_MEDIA",
+        "LEAD_GENERATION"
+    ],
+    "environmentVariables": {
+        "APIFY_DISABLE_BROWSER_SANDBOX": "1"
+    }
+}
