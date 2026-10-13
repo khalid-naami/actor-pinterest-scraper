@@ -1,0 +1,33 @@
+{
+  "name": "actor-pinterest-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Pinterest Ultimate All-in-One Scraper on Apify. Extracts Pins with HD images & videos, Outbound Shopify/Etsy product links, Save counts, Boards with all Pins, User Profiles & Monthly Views, and Keyword Search without login.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node src/main.js"
+  },
+  "keywords": [
+    "apify",
+    "actor",
+    "pinterest",
+    "pinterest-scraper",
+    "pins",
+    "boards",
+    "dropshipping",
+    "ecommerce",
+    "outbound-links",
+    "hd-images",
+    "crawlee",
+    "playwright"
+  ],
+  "author": "Khalil",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "apify": "^3.2.6",
+    "crawlee": "^3.12.2",
+    "got-scraping": "^4.0.7",
+    "playwright": "^1.49.1"
+  }
+}
