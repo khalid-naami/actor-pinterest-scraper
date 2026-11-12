@@ -1,7 +1,9 @@
 {
     "actorSpecification": 1,
     "fields": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
+        "additionalProperties": true,
         "properties": {
             "type": {
                 "type": "string",
@@ -27,9 +29,14 @@
                 "type": "string",
                 "title": "Original HD Image URL"
             },
+            "coverUrl": {
+                "type": "string",
+                "title": "Board Cover Image URL"
+            },
             "images": {
                 "type": "object",
-                "title": "All Image Resolutions"
+                "title": "All Image Resolutions",
+                "additionalProperties": true
             },
             "isVideo": {
                 "type": "boolean",
@@ -101,7 +108,10 @@
             },
             "hashtags": {
                 "type": "array",
-                "title": "Hashtags List"
+                "title": "Hashtags List",
+                "items": {
+                    "type": "string"
+                }
             },
             "email": {
                 "type": "string",
@@ -109,11 +119,17 @@
             },
             "emails": {
                 "type": "array",
-                "title": "Extracted Emails"
+                "title": "Extracted Emails",
+                "items": {
+                    "type": "string"
+                }
             },
             "phones": {
                 "type": "array",
-                "title": "Extracted Phones"
+                "title": "Extracted Phones",
+                "items": {
+                    "type": "string"
+                }
             },
             "searchQuery": {
                 "type": "string",
@@ -126,6 +142,55 @@
             "scrapedAt": {
                 "type": "string",
                 "title": "Scraped At Timestamp"
+            }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "type",
+                    "title",
+                    "authorName",
+                    "saveCount",
+                    "domain",
+                    "outboundUrl",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "type": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "authorName": {
+                        "label": "Creator",
+                        "format": "text"
+                    },
+                    "saveCount": {
+                        "label": "Saves",
+                        "format": "number"
+                    },
+                    "domain": {
+                        "label": "Domain",
+                        "format": "text"
+                    },
+                    "outboundUrl": {
+                        "label": "Outbound Link",
+                        "format": "link"
+                    },
+                    "url": {
+                        "label": "Pinterest URL",
+                        "format": "link"
+                    }
+                }
             }
         }
     }
